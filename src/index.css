@@ -44,6 +44,16 @@ nav{
   
   justify-content: space-around;
 }
+.bg-img {
+  position:fixed;
+  left:0;
+  top:-3%;
+  margin-top: 4%;
+  margin-left: 4%;
+  max-width: 9%;
+  max-height:9%;
+  
+}
 .navbar > li {
   list-style: none;
 }
