@@ -1,5 +1,8 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'League Spartan',  Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   /* HSL COLORS */
@@ -21,7 +24,29 @@
 
 
 }
-
+nav{
+  border-style: dotted;
+  /* min-height: 10%; */
+  
+}
+/* TO DO toggle wrapper on and off to figuer out which layout i like best */
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+} */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  font-family: 'League Spartan';
+  font-weight: 600;
+  font-size: 1.75rem;
+  
+  justify-content: space-around;
+}
+.navbar > li {
+  list-style: none;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -31,16 +56,24 @@ a:hover {
   color: #535bf2;
 }
 
+.container {
+  place-items: center;
+  margin-top: 15%;
+  
+  
+  
+}
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex; */
+  place-content: center;
+
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.5rem;
   line-height: 1.1;
 }
 
