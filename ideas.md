@@ -34,3 +34,14 @@ WHEN I am presented with the Resume section
 THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
 WHEN I view the footer
 THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter) 
+
+
+
+
+    A single Header component that appears on multiple pages
+
+    A single Navigation component within the header that will be used to conditionally render the different sections of your portfolio
+
+    A single Project component that will be used multiple times in the Portfolio section
+
+    A single Footer component that appears on multiple pages
