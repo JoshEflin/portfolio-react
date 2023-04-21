@@ -94,7 +94,8 @@ button:focus-visible {
 /* ----NAV BAR STUFF--- */
 /* --------------------- */
 nav{
-  border-style: none
+  border-style: none;
+  
   /* min-height: 10%; */
   
 }
@@ -105,30 +106,30 @@ nav{
   align-items: space-between;
 } */
 .navbar {
+  margin-left: 0;
+  list-style-type: none;
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   font-family: 'League Spartan';
   font-weight: 600;
   font-size: 1.75rem;
-  
-  justify-content: space-between;
+  justify-content: space-evenly ;
 }
 
 /* TO DOset media query for 600px HAMBURGER MENU AND SVG element must do something different */
 .bg-img {
-  position:relative;
-  left:-5%;
-  margin-top: auto;
-  margin-left: 0;
-  max-width: 9%;
-  max-height:9%;
-  
+  max-width: 10%;
+  max-height:10%; 
 }
 .navbar > li {
   list-style: none;
 }
 /* ----- appCard related styling */
+/* add a media query for hiding tech list items in smaller devices */
 .tech-list, .link-list {
+  margin-left: 0;
+  padding-left: 0;
   display: flex;
   justify-content: center;
   list-style: none;

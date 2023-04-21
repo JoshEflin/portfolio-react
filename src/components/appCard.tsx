@@ -1,37 +1,12 @@
-import dogCard from '../assets/bone-to-pick.png'
+// import dogCard from '../assets/bone-to-pick.png'
 import gitHubIcon from '../assets/github-mark.png'
-
-import booboo from '../assets/hey-boo-boo.png'
-import weatherApp from '../assets/desktop-weather-app.png'
-import jQueryCal from '../assets/JQuery Calender.png'
+import data from './data/appCardData';
+import { Links, TechComponentProps } from './data/appCardData';
 import React from 'react';
-interface Links {
-   github:string;
-   deployed:string;
-}
-interface TechComponentProps {
- img:any
- description:string;
- techs: string[];
- links: Links
-}
-const data:TechComponentProps = {
-    img:dogCard,
-    description:"A front-end only dog adoption web-app that turns data from petfinder's API and apiNinja's Dog Breed API into trading cards",
-    techs:['JQuery', 'Bulma', 'Adobe Express', 'Petfinder API', 'Dogs API', 'Coolors','Google Fonts', 'Font Awesome'],
-    links: {
-            github:"https://github.com/JoshEflin/A-Bone-to-Pick",
-            deployed:"https://josheflin.github.io/A-Bone-to-Pick/",
-        }
-}
-//  function renderTech(techArr:[string]):React.FC{
-//     techArr.forEach((tech)=>{
-//         return tech
 
-//     })
-//  }
 
-const TechComponent: React.FC<TechComponentProps> = ({ techs }) => {
+
+const TechComponent: React.FC<TechComponentProps> = ( {techs} ) => {
   return (
     <ul className = 'tech-list'>
       {techs.map((tech, index) => (
@@ -65,21 +40,18 @@ const LinkComponent:React.FC<Links> =(links)=> {
       </ul>
       )
   }
-    
+  // this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
 
-
-export default function AppCard() {
+export default function AppCard(data:TechComponentProps) {
     
     return(
         <div className='appCard'>
         <img className = 'appCard-img'src ={data.img}/>
         <p className = 'project-description'>{data.description}</p>
         {TechComponent(data)}
-        {LinkComponent(data.links)}
-
         
-                
-              
+        {LinkComponent(data.links)}
+     
         </div>
     )
 
