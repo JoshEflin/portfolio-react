@@ -1,5 +1,7 @@
 import J from "./svg"
 import { useState } from "react"
+// use state to change the colors of the nav links
+// dynamically add href values
 
 const navItemsArr ={data:['About Me', 'Resume', 'Projects', 'Contact'] }
 const NavItem: React.FC<{navLink:string[]}> = ( {navLink} )=>{
