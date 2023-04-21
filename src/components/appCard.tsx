@@ -1,4 +1,4 @@
-// import dogCard from '../assets/bone-to-pick.png'
+ import dogCard from '../assets/bone-to-pick.png'
 import gitHubIcon from '../assets/github-mark.png'
 import data from './data/appCardData';
 import { Links, TechComponentProps } from './data/appCardData';
@@ -6,10 +6,10 @@ import React from 'react';
 
 
 
-const TechComponent: React.FC<TechComponentProps> = ( props ) => {
+const TechComponent: React.FC<{techs:string[]}> = ( {techs} ) => {
   return (
     <ul className = 'tech-list'>
-      {props.techs.map((tech, index) => (
+      {techs.map((tech, index) => (
         <li className='tech-list-item' key={index}>{tech}</li>
       ))}
     </ul>
@@ -42,18 +42,21 @@ const LinkComponent:React.FC<Links> =({github, deployed})=> {
   }
   // this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
 
-export default function AppCard({ img, description, techs, links}:TechComponentProps) {
+export default function AppCard({data}:{data:TechComponentProps[]}) {
     
     return(
-        <div className='appCard'>
-        <img className = 'appCard-img'src ={img}/>
-        <p className = 'project-description'>{description}</p>
-        {/* {TechComponent(data)}
-        {LinkComponent(data.links)} */}
-        <TechComponent techs = {techs} img = '' description='' links= {{deployed:'', github:''}} />
-        <LinkComponent github ={links.github} deployed = {links.deployed} />
+    <>
+    {console.log (data)}
+      {data.map((proj: TechComponentProps, index)=>(
+        <div key ={index} className='appCard'>
+        <img className = 'appCard-img'src ={proj.img} />
+        <p className = 'project-description'>{proj.description}</p>
+        <TechComponent techs = {proj.techs} />
+        <LinkComponent github ={proj.links.github} deployed = {proj.links.deployed} />
      
         </div>
+        ))}
+    </>
     )
 
 }
