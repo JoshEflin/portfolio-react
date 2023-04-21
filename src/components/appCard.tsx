@@ -6,22 +6,22 @@ import React from 'react';
 
 
 
-const TechComponent: React.FC<TechComponentProps> = ( {techs} ) => {
+const TechComponent: React.FC<TechComponentProps> = ( props ) => {
   return (
     <ul className = 'tech-list'>
-      {techs.map((tech, index) => (
+      {props.techs.map((tech, index) => (
         <li className='tech-list-item' key={index}>{tech}</li>
       ))}
     </ul>
   );
 };
 
-const LinkComponent:React.FC<Links> =(links)=> {
+const LinkComponent:React.FC<Links> =({github, deployed})=> {
 
   return(
     <ul className = 'link-list'>
     <li className= 'link-list-item'>
-      <a href={links.github} target= "_blank"> 
+      <a href={github} target= "_blank"> 
         <p>
           Check out the repository
         </p>
@@ -30,7 +30,7 @@ const LinkComponent:React.FC<Links> =(links)=> {
       
     </li>
     <li className='link-list-item'>
-      <a href = {links.deployed} target= '_blank'> 
+      <a href = {deployed} target= '_blank'> 
         <p>
           Deployed Application
         </p>
@@ -42,15 +42,16 @@ const LinkComponent:React.FC<Links> =(links)=> {
   }
   // this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
 
-export default function AppCard(data:TechComponentProps) {
+export default function AppCard({ img, description, techs, links}:TechComponentProps) {
     
     return(
         <div className='appCard'>
-        <img className = 'appCard-img'src ={data.img}/>
-        <p className = 'project-description'>{data.description}</p>
-        {TechComponent(data)}
-        
-        {LinkComponent(data.links)}
+        <img className = 'appCard-img'src ={img}/>
+        <p className = 'project-description'>{description}</p>
+        {/* {TechComponent(data)}
+        {LinkComponent(data.links)} */}
+        <TechComponent techs = {techs} img = '' description='' links= {{deployed:'', github:''}} />
+        <LinkComponent github ={links.github} deployed = {links.deployed} />
      
         </div>
     )
