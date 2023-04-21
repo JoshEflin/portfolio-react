@@ -1,5 +1,5 @@
 import reactLogo from './assets/react.svg'
-import ReactTyped from 'react-typed'
+// import ReactTyped from 'react-typed'
 
 export default function Welcome() {
 
@@ -8,7 +8,7 @@ export default function Welcome() {
   
         <h1>Josh Eflin: Web Development</h1>
         <div className="text">
-        <ReactTyped
+        {/* <ReactTyped
           strings={[
               'Opera Singer turned Web Developer',
               'Welcome',
@@ -17,7 +17,7 @@ export default function Welcome() {
               typeSpeed={40}
               backSpeed={50}
               loop
-        />
+        /> */}
       </div>
       <button>Enter</button>
       {/* <a href="https://reactjs.org" target="_blank">

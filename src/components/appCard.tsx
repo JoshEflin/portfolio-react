@@ -1,9 +1,6 @@
- import dogCard from '../assets/bone-to-pick.png'
 import gitHubIcon from '../assets/github-mark.png'
-import data from './data/appCardData';
 import { Links, TechComponentProps } from './data/appCardData';
 import React from 'react';
-
 
 
 const TechComponent: React.FC<{techs:string[]}> = ( {techs} ) => {

@@ -8,7 +8,7 @@
   /* HSL COLORS */
   --cool-gray: rgba(142, 142, 190, 0.331);
 --shamrock-green: hsla(142, 37%, 45%, 1);
---rose-ebony: rgba(89, 55, 54, 0.184);
+--rose-ebony: rgba(89, 55, 54, 0.147);
 --light-cyan: hsla(175, 42%, 90%, 1);
 --steel-blue: hsla(204, 72%, 45%, 1);
 
@@ -85,7 +85,7 @@ button:focus-visible {
     color: var(--shamrock-green)
   }
   button {
-    background-color: #f9f9f9;
+    background-color:var(--cool-gray);
   }
   button:hover {
     background-color: var(--rose-ebony);
@@ -118,6 +118,7 @@ nav{
 }
 
 /* TO DOset media query for 600px HAMBURGER MENU AND SVG element must do something different */
+/* TO DO media qqueery at 700 px to fix text wrapping in AppCards */
 .bg-img {
   max-width: 10%;
   max-height:10%; 
@@ -141,15 +142,20 @@ nav{
   font-size: 1rem;
   
 }
+.link-list-item {
+  max-height: 120px;
+}
 .git-hub-icon {
-  max-height: 10%;
+  max-height: 25%;
 }
 #plane-icon {
   /* position: relative; */
   margin-top: 8px;
 }
 .appCard {
-  height:50%
+  height:50%;
+  background-color: var(--rose-ebony);
+  border-radius: 5px;
 }
 .appCard-img {
   aspect-ratio: 1/1;

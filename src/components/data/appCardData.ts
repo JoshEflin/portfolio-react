@@ -17,7 +17,7 @@ interface Links {
  const data:TechComponentProps[] = [{
      img:dogCard,
      description:"A front-end only dog adoption web-app that turns data from petfinder's API and apiNinja's Dog Breed API into trading cards",
-     techs:['JQuery', 'Bulma', 'Adobe Express', 'Petfinder API', 'Dogs API', 'Coolors','Google Fonts', 'Font Awesome'],
+     techs:['JQuery', 'Bulma', 'Adobe Express', 'Petfinder API', 'Dogs API'],
      links: {
              github:"https://github.com/JoshEflin/A-Bone-to-Pick",
              deployed:"https://josheflin.github.io/A-Bone-to-Pick/",
