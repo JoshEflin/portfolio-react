@@ -22,41 +22,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  
+}
 
-}
-nav{
-  border-style: dotted;
-  /* min-height: 10%; */
-  
-}
-/* TO DO toggle wrapper on and off to figuer out which layout i like best */
-/* .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-} */
-.navbar {
-  display: flex;
-  flex-direction: row;
-  font-family: 'League Spartan';
-  font-weight: 600;
-  font-size: 1.75rem;
-  
-  justify-content: space-around;
-}
-.bg-img {
-  position:fixed;
-  left:0;
-  top:-3%;
-  margin-top: 4%;
-  margin-left: 4%;
-  max-width: 9%;
-  max-height:9%;
-  
-}
-.navbar > li {
-  list-style: none;
-}
 a {
   font-weight: 500;
   color: #646cff;
@@ -77,7 +45,7 @@ body {
   margin: 0;
   /* display: flex; */
   place-content: center;
-
+  
   min-width: 320px;
   min-height: 100vh;
 }
@@ -108,7 +76,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+ @media (prefers-color-scheme: light) {
   :root {
     background-color: var(--light-cyan);
     color: var(--steel-blue)
@@ -121,5 +89,71 @@ button:focus-visible {
   }
   button:hover {
     background-color: var(--rose-ebony);
-  }
+  } 
+} 
+/* ----NAV BAR STUFF--- */
+/* --------------------- */
+nav{
+  border-style: none
+  /* min-height: 10%; */
+  
+}
+/* TO DO toggle wrapper on and off to figuer out which layout i like best */
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+} */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  font-family: 'League Spartan';
+  font-weight: 600;
+  font-size: 1.75rem;
+  
+  justify-content: space-between;
+}
+
+/* TO DOset media query for 600px HAMBURGER MENU AND SVG element must do something different */
+.bg-img {
+  position:relative;
+  left:-5%;
+  margin-top: auto;
+  margin-left: 0;
+  max-width: 9%;
+  max-height:9%;
+  
+}
+.navbar > li {
+  list-style: none;
+}
+/* ----- appCard related styling */
+.tech-list, .link-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  justify-content: space-evenly;
+  
+  
+}
+.tech-list-item, .link-list-item {
+  font-size: 1rem;
+  
+}
+.git-hub-icon {
+  max-height: 10%;
+}
+#plane-icon {
+  /* position: relative; */
+  margin-top: 8px;
+}
+.appCard {
+  height:50%
+}
+.appCard-img {
+  aspect-ratio: 1/1;
+    max-width: 75%;
+    height: 400px;
+    object-fit: cover;
+    padding:5px;
 }
