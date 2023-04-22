@@ -8,13 +8,13 @@ interface Links {
     github:string;
     deployed:string;
  }
- interface TechComponentProps {
+ interface AppCardProps {
   img:any
   description:string;
   techs: string[];
   links: Links
  }
- const data:TechComponentProps[] = [{
+ const data:AppCardProps[] = [{
      img:dogCard,
      description:"A front-end only dog adoption web-app that turns data from petfinder's API and apiNinja's Dog Breed API into trading cards",
      techs:['JQuery', 'Bulma', 'Adobe Express', 'Petfinder API', 'Dogs API'],
@@ -64,5 +64,5 @@ interface Links {
              deployed:"https://josheflin.github.io/Hey-boo-boo/",
          }
  }]
-export type {Links, TechComponentProps}
+export type {Links, AppCardProps}
 export default data

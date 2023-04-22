@@ -1,5 +1,5 @@
 import gitHubIcon from '../assets/github-mark.png'
-import { Links, TechComponentProps } from './data/appCardData';
+import { Links, AppCardProps } from './data/appCardData';
 import React from 'react';
 
 
@@ -39,12 +39,12 @@ const LinkComponent:React.FC<Links> =({github, deployed})=> {
   }
   // this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
 
-export default function AppCard({data}:{data:TechComponentProps[]}) {
+export default function AppCard({data}:{data:AppCardProps[]}) {
     
     return(
     <>
     {console.log (data)}
-      {data.map((proj: TechComponentProps, index)=>(
+      {data.map((proj: AppCardProps, index)=>(
         <div key ={index} className='appCard'>
         <img className = 'appCard-img'src ={proj.img} />
         <p className = 'project-description'>{proj.description}</p>

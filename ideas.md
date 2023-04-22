@@ -8,6 +8,15 @@
 
 # full requirements
 
+Next Steps...
+Do about me
+do footer
+Do Resume ( consider interactive resume)
+add functionality to conditionally render different elements depending on the state
+the state will change when a nav bar or footer item is clicked
+design app card styling so Text appears on the side of the card  ( REALLY get into the CSS here, make it look good)
+
+
 
 GIVEN a single-page application portfolio for a web developer
 WHEN I load the portfolio
