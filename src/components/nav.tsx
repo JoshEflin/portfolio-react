@@ -1,4 +1,4 @@
-import J from "./svg"
+import J from "./Svg"
 import { useState } from "react"
 // use state to change the colors of the nav links
 // dynamically add href values
