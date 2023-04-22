@@ -44,12 +44,12 @@ export default function AppCard({data}:{data:AppCardProps[]}) {
     return(
     <>
     {console.log (data)}
-      {data.map((proj: AppCardProps, index)=>(
+      {data.map(({img, description, techs, links:{deployed, github}}: AppCardProps, index)=>(
         <div key ={index} className='appCard'>
-        <img className = 'appCard-img'src ={proj.img} />
-        <p className = 'project-description'>{proj.description}</p>
-        <TechComponent techs = {proj.techs} />
-        <LinkComponent github ={proj.links.github} deployed = {proj.links.deployed} />
+        <img className = 'appCard-img'src ={img} />
+        <p className = 'project-description'>{description}</p>
+        <TechComponent techs = {techs} />
+        <LinkComponent github ={github} deployed = {deployed} />
      
         </div>
         ))}

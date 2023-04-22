@@ -2,7 +2,9 @@
 
 export default function J () {
     return (
-        
+        <a id = 'svg-display' href='/'
+        style={{ display: 'inline-block', width: '153.60px', height: '153.60px' }}
+        >
             <svg viewBox="-12.8 -12.8 153.60 153.60" 
               xmlns="http://www.w3.org/2000/svg" 
               xmlnsXlink="http://www.w3.org/1999/xlink" 
@@ -31,6 +33,7 @@ export default function J () {
                     </path>
                 </g> 
              </svg>
+             </a>
         
     )
 }

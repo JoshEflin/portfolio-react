@@ -2,22 +2,21 @@
 
 import './App.css'
 import Welcome from './components/Welcome'
-import Nav from './components/Nav'
+import Nav from './components/Nav';
 import data from './components/data/appCardData';
 import AppCard from './components/AppCard'
 import AboutMe from './components/Aboutme';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
+import ContactForm from './components/ContactForm';
+import View from './View';
 
 export default function App() {
  
 
   return (
     <div className='wrapper'>
-    
-      <Nav />
-      <Welcome />
-      <AboutMe />
-      <AppCard data={data}/>
+      <View/>
       <Footer />
     </div >
   )

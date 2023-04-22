@@ -4,7 +4,10 @@ export default function AboutMe() {
 
     return  (
         <>
-        <p>ME!</p>
+        <p>ME!ASDFASDFASDFASDFASDFASF
+
+            ASDFASDFASDF
+        </p>
         </>
     )
 }

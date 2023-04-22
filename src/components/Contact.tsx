@@ -1,27 +1,36 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
-  example: string,
-  exampleRequired: string,
+  name: string,
+  email: string,
+  text: string,
 };
 
 export default function Contact() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>({ 
+    defaultValues:
+    {
+      name:"Name",
+     email: "email@address.com",
+     text: "Enter Message"
+    }
+    });
   const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+  console.log(register)
 
-  console.log(watch("example")) // watch input value by passing the name of it
-
+  console.log(watch("name")) // watch input value by passing the name of it
+console.log(errors, "this is the error")
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue="test" {...register("example")} />
+      <input  {...register("name",{required:true}) } />
       
       {/* include validation with required or other standard HTML validation rules */}
-      <input {...register("exampleRequired", { required: true })} />
+      <input {...register("email", { required: true })} />
       {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
-      
+      {errors.email && <span>This field is required</span>}
+      <input {...register('text', {required:true})} />
       <input type="submit" />
     </form>
   );
