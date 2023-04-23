@@ -16,7 +16,8 @@
  
   background-color: hsla(175, 42%, 90%, 1);
   color:  hsla(204, 72%, 45%, 1);
-  
+  margin:auto;
+  box-sizing: border-box;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -45,9 +46,7 @@ a:hover {
 }
 body {
   margin: 0;
- position: relative;
-  place-content: center;
-  
+  position: relative;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -101,16 +100,14 @@ button:focus-visible {
 /* --------------------- */
 nav{
   border-style: none;
-  
   /* min-height: 10%; */
-  
 }
 /* TO DO toggle wrapper on and off to figuer out which layout i like best */
-/* .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-} */
+.wrapper {
+  margin:auto;
+  padding:0;
+  min-height: 100vh;
+}
 
 .navbar {
   margin-left: 0;
@@ -198,15 +195,29 @@ footer ul {
   display: flex;
   justify-content: space-around;
 }
+.footer-section-el{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100px;
+}
 footer img {
-  height: 1.5rem;
+  height: 1.75rem;
 }
 #footer {
   position:relative;
   bottom: 0;
   text-align: center;
- 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
-.view-window{
-  padding-bottom: 10%;
+#view-window{
+  padding-bottom: 125px;
+}
+#resume {
+  min-width: 65%;
+  height:110vh;
+}
+h2 {
+  font-size: 2.25rem;
 }
