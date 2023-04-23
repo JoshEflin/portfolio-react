@@ -2,9 +2,13 @@ import J from "./Svg"
 import { useState } from "react"
 // use state to change the colors of the nav links
 // dynamically add href values
+interface navProps  {
+  currentView:string,
+  handleView:(view:string) =>void;
+}
 
 const navItemsArr =['About Me', 'Resume', 'Projects', 'Contact']
-const NavItem: React.FC<{currentView:string ,navLink:string[]}> = ( {currentView, handleView, navLink} )=>{
+const NavItem: React.FC<{currentView:string ,navLink:string[], handleView:any}> = ( {currentView, handleView, navLink} )=>{
   return(
     <>
     {navLink.map((item,index)=>(
@@ -19,8 +23,8 @@ const NavItem: React.FC<{currentView:string ,navLink:string[]}> = ( {currentView
 </>
   )
 }
-export default function Nav ({currentView, handleView}) {
-
+export default function Nav(props:navProps):JSX.Element{
+ const {currentView, handleView} = props;
 //  const [clicked, setClicked] =useState(false)
  
 //  function handleClick(){
