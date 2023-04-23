@@ -2,7 +2,7 @@
 
 export default function J () {
     return (
-        <a id = 'svg-display' href='/'
+        <a id = 'svg-display' href='/portfolio-react'
         style={{ display: 'inline-block', width: '153.60px', height: '153.60px' }}
         >
             <svg viewBox="-12.8 -12.8 153.60 153.60" 
