@@ -30,7 +30,10 @@ const renderPage = () =>{
         return <AppCard data={data} />
     }
 }
-const handleView= (view:string) => setCurrentView(view)
+function handleView(view:string){
+ return  setCurrentView(view)
+
+}
 
 return( 
 <div id="view-window">
