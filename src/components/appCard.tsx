@@ -37,6 +37,23 @@ const LinkComponent:React.FC<Links> =({github, deployed})=> {
       </ul>
       )
   }
+  // Below function is to split up large text descriptions into smaller p tags to append. need to split strings on whitespace though
+  const DescriptionComponent:React.FC<{description:string}> = ({description}) =>{
+    if (description.length > 100){
+      const halfway= Math.floor(description.length/2)
+      const whitespace= description.indexOf(' ', halfway)
+      console.log(whitespace)
+      return(
+        <>
+        <p>{description.substring( 0,whitespace)}</p>
+        <p>{description.substring( whitespace, description.length)}</p>
+      
+        </>
+      )
+    } else{
+      return <p>{description}</p>
+    }
+  }
   // this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
 
 export default function AppCard({data}:{data:AppCardProps[]}) {
@@ -47,7 +64,7 @@ export default function AppCard({data}:{data:AppCardProps[]}) {
       {data.map(({img, description, techs, links:{deployed, github}}: AppCardProps, index)=>(
         <div key ={index} className='appCard'>
         <img className = 'appCard-img'src ={img} />
-        <p className = 'project-description'>{description}</p>
+        <DescriptionComponent description= {description} />
         <TechComponent techs = {techs} />
         <LinkComponent github ={github} deployed = {deployed} />
      

@@ -19,10 +19,9 @@ export default function Welcome() {
               loop
         /> */}
       </div>
-      <button>Enter</button>
-      {/* <a href="https://reactjs.org" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a> */}
+      <a href= "https://github.com/JoshEflin" target="_blank">
+      <button>GitHub</button>
+        </a>
       </div>
     )
   }

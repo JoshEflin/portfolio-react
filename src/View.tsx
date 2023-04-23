@@ -10,9 +10,9 @@ import { useState } from 'react';
 import Resume from './components/Resume';
 import Nav from './components/Nav';
 
+
 export default function View(){
 const [currentView, setCurrentView] = useState('Welcome');
-
 const renderPage = () =>{
     if(currentView ==='Welcome'){
         return<Welcome />
