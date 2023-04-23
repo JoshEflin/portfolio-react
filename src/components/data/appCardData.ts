@@ -30,7 +30,7 @@ interface Links {
      techs:['Handlebars','Node.js','Express.js','sequelize','express-session','Google Calendar API',],
      links: {
              github:"https://github.com/JoshEflin/Hey-boo-boo",
-             deployed:"https://josheflin.github.io/Hey-boo-boo/",
+             deployed:"https://lit-river-34902.herokuapp.com/",
          }
 
  },{
