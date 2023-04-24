@@ -205,14 +205,18 @@ footer ul {
 footer img {
   height: 1.75rem;
 }
+.footer-section-el> ul {
+  list-style: none;
+}
 #footer {
   /* position:fixed; */
   bottom: 0;
   border-radius: 5px;
-  background-color: var(--steel-blue);
+  /* background-color: var(--steel-blue); */
   margin-bottom: 0px;
   min-height: 10%;
   width:100%;
+  list-style: none;
 }
 /* #view-window{
   padding-bottom: 125px;
@@ -225,11 +229,41 @@ h2 {
   font-size: 2.25rem;
 }
 footer {
+  bottom:0;
   }
 
 .contact-container {
-  height:55%;
+  height:65vh;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  justify-content: center;
+  align-items: center;
 }
-.contact-form >input {
-  display:block;
+.contact-container > * {
+  flex:1
+}
+.contact-form  {
+  display:flex;
+  flex-direction: column;
+  
+  gap:1rem;
+  width:50rem;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 4px 4px 8px 1px #00000075;
+  border-radius: 2px;
+
+}
+
+.text-input {
+  height:10rem
+}
+.inputs {
+  border-radius: 5px;
+  font-family: 'League Spartan';
+  font-size: 2em;
+
+  width:30rem;
+  border-color: var(--shamrock-green);
 }

@@ -1,8 +1,9 @@
+import { navProps } from "./Nav"
 
-
-export default function J () {
+export default function J ({currentView, handleView}:navProps) {
     return (
-        <a id = 'svg-display' href='/portfolio-react'
+        <a id = 'svg-display' href='#Welcome'
+        onClick={()=>handleView('Welcome')}
         style={{ display: 'inline-block', width: '153.60px', height: '153.60px' }}
         >
             <svg viewBox="-12.8 -12.8 153.60 153.60" 

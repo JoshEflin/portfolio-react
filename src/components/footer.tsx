@@ -5,12 +5,12 @@ export default function Footer(){
 
     return(
         <footer id="footer">             
-        <h3> </h3>
+        <h3>HI </h3>
         
         <section className="footer-section-el">
             <ul>
                 <li>
-                    <a href="mailto:eflinjh@gmail.com">
+                    <a href="mailto:eflinjh@gmail.com" target = "_blank">
                         <img src={emailIcon} alt= "Email Icon"/>
                     </a>
                     

@@ -40,7 +40,7 @@ return( <>
     <Nav currentView={currentView} handleView={handleView} />
 <div id="view-window">
     {renderPage()}
-    <Footer />
+    {/* <Footer /> */}
 </div>
 
 </>

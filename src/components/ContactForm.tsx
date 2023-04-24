@@ -42,25 +42,23 @@ export default function ContactForm() {
     
     return (
       <div className="contact-container">
-        <p>
-          Hello {firstName} {email} {text}
-        </p>
+        
         <form className="contact-form">
-          <input
+          <input className="inputs name-input"
             value={firstName}
             name="firstName"
             onChange={handleInputChange}
             type="text"
             placeholder="First Name"
           />
-          <input
+          <input className="inputs email-input"
             value={email}
             name="email"
             onChange={handleInputChange}
             type="text"
             placeholder="email"
           />
-          <input
+          <input className="inputs text-input"
           value={text}
           name="text"
           onChange= {handleInputChange}
