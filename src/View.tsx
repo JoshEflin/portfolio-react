@@ -1,10 +1,7 @@
 import Welcome from './components/Welcome'
-
 import data from './components/data/appCardData';
 import AppCard from './components/AppCard'
 import AboutMe from './components/Aboutme';
-
-import Contact from './components/Contact';
 import ContactForm from './components/ContactForm';
 import { useState } from 'react';
 import Resume from './components/Resume';
