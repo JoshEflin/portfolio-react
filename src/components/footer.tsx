@@ -1,4 +1,3 @@
-import React from "react";
 import gitHubIcon from '../assets/github-mark.png'
 import phoneIcon from '../assets/Phone-Icon-PNG.png'
 import emailIcon from '../assets/mail.png'

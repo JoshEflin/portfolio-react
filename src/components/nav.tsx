@@ -39,12 +39,10 @@ export default function Nav(props:navProps):JSX.Element{
     return (
         <nav>
       <ul className='navbar'>
-        
-        <J />
-        
-      <NavItem  currentView = {currentView} 
-      handleView = {handleView}
-      navLink={navItemsArr} />
+        <J /> 
+        <NavItem  currentView = {currentView} 
+          handleView = {handleView}
+          navLink={navItemsArr} />
       </ul>
     </nav>
     )

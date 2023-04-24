@@ -41,11 +41,11 @@ export default function ContactForm() {
     };
     
     return (
-      <div>
+      <div className="contact-container">
         <p>
           Hello {firstName} {email} {text}
         </p>
-        <form className="form">
+        <form className="contact-form">
           <input
             value={firstName}
             name="firstName"

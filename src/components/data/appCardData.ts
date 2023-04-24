@@ -4,7 +4,7 @@ import weatherApp from '../../assets/desktop-weather-app.png'
 import jQueryCal from '../../assets/JQuery Calender.png'
 import blog from '../../assets/Tech-nollege-E.png'
 import noteTaker from '../../assets/note-taker.png'
-import React from 'react'
+
 
 interface Links {
     github:string;

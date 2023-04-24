@@ -9,6 +9,7 @@ import ContactForm from './components/ContactForm';
 import { useState } from 'react';
 import Resume from './components/Resume';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 
 export default function View(){
@@ -35,10 +36,13 @@ function handleView(view:string){
 
 }
 
-return( 
-<div id="view-window">
+return( <>
     <Nav currentView={currentView} handleView={handleView} />
+<div id="view-window">
     {renderPage()}
+    <Footer />
 </div>
+
+</>
       )
 }

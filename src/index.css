@@ -98,16 +98,17 @@ button:focus-visible {
 } 
 /* ----NAV BAR STUFF--- */
 /* --------------------- */
-nav{
+/* nav {
   border-style: none;
-  /* min-height: 10%; */
-}
+  /* min-height: 10%; 
+} */
+
 /* TO DO toggle wrapper on and off to figuer out which layout i like best */
-.wrapper {
+/* .wrapper {
   margin:auto;
   padding:0;
   min-height: 100vh;
-}
+} */
 
 .navbar {
   margin-left: 0;
@@ -191,33 +192,44 @@ nav{
 a > .active  :hover{
   color:var(--cool-gray)
 }
+
 footer ul {
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
 }
-.footer-section-el{
-  display:flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 100px;
-}
+/* .footer-section-el{
+   min-height: 10%;
+} */
+
 footer img {
   height: 1.75rem;
 }
 #footer {
-  position:relative;
+  /* position:fixed; */
   bottom: 0;
-  text-align: center;
-  padding-bottom: 0px;
+  border-radius: 5px;
+  background-color: var(--steel-blue);
   margin-bottom: 0px;
+  min-height: 10%;
+  width:100%;
 }
-#view-window{
+/* #view-window{
   padding-bottom: 125px;
-}
+} */
 #resume {
   min-width: 65%;
   height:110vh;
 }
 h2 {
   font-size: 2.25rem;
+}
+footer {
+  }
+
+.contact-container {
+  height:55%;
+}
+.contact-form >input {
+  display:block;
 }
