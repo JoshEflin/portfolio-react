@@ -5,7 +5,6 @@ export default function Footer(){
 
     return(
         <footer id="footer">             
-        <h3>HI </h3>
         
         <section className="footer-section-el">
             <ul>

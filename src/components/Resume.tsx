@@ -1,4 +1,4 @@
-import download from '../assets/Copy of Josh Eflin - Resume Update v2.pdf'
+import download from '../assets/JoshEflin-Resume.pdf'
 export default function Resume() {
     return(
         <>
