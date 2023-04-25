@@ -7,6 +7,7 @@ This repository is my professional portfolio built with react and typescript usi
 
 ## Table of Contents
 - [License](#license)
+- [Deployment](#deployment)
 - [Screenshot](#screenshot)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -17,6 +18,9 @@ This repository is my professional portfolio built with react and typescript usi
 ## License
 This repository is licensed under
    MIT
+
+## Deployment
+https://josheflin.github.io/portfolio-react/
 
 ## Screenshot
 ![screenshot](./src/assets/portfolio-screenshot.png)
