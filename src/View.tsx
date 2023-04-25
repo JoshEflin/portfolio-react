@@ -27,9 +27,13 @@ const renderPage = () =>{
     if (currentView === 'Projects'){
         return <AppCard data={data} />
     }
+    if(currentView===null) {
+
+    }
 }
 function handleView(view:string){
  return  setCurrentView(view)
+// return setCurrentView(null)
 
 }
 

@@ -1,6 +1,6 @@
-import gitHubIcon from '../assets/github-mark.png'
+import gitHubIcon from '../assets/github-mark-green.png'
 import phoneIcon from '../assets/Phone-Icon-PNG.png'
-import emailIcon from '../assets/mail.png'
+import LinkedInIcon from '../assets/LI-In-Bug.png'
 export default function Footer(){
 
     return(
@@ -10,8 +10,8 @@ export default function Footer(){
         <section className="footer-section-el">
             <ul>
                 <li>
-                    <a href="mailto:eflinjh@gmail.com" target = "_blank">
-                        <img src={emailIcon} alt= "Email Icon"/>
+                    <a href="https://www.linkedin.com/in/josh-eflin-4378baa7/" target = "_blank">
+                        <img src={LinkedInIcon} alt= "Email Icon"/>
                     </a>
                     
                 </li>

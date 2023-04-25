@@ -5,6 +5,7 @@ export default function ContactForm() {
     const [firstName, setFirstName] = useState('');
     const [email, setEmail]= useState('');
     const [text, setText]= useState('')
+    const [requiredField, setRequiredField] = useState('');
 
     const handleInputChange = (e:ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -16,7 +17,15 @@ export default function ContactForm() {
       setText(value);
     }
   };
-
+  const handleInputBlur = (e:ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    console.log(e.target)
+    if (value==='') {
+      console.log('here')
+      alert(`The ${name} field is required`)
+        setRequiredField(name);
+    } 
+};
   // return name ==='firstName'? setFirstName(value): setEmail(value)
     
   const handleFormSubmit = (e:FormEvent<HTMLFormElement>) => {
@@ -31,8 +40,9 @@ export default function ContactForm() {
       } if(!text){
         missing.push("text");
       } 
+      if (missing[0]){
       alert(`You are missing the following fields:\n${missing[0]}\n${missing[1]||''}\n${missing[2]||''}`)
-      
+      }
       if (email){
         const emailregex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         const isValid =emailregex.test(email)
@@ -53,8 +63,10 @@ export default function ContactForm() {
         <form className="contact-form" onSubmit={handleFormSubmit}>
           <input className="inputs name-input"
             value={firstName}
-            name="firstName"
+            name="First Name"
             onChange={handleInputChange}
+            onBlur={handleInputBlur}
+
             type="text"
             placeholder="First Name"
           />
@@ -62,13 +74,17 @@ export default function ContactForm() {
             value={email}
             name="email"
             onChange={handleInputChange}
+            onBlur={handleInputBlur}
+
             type="text"
             placeholder="Email Address"
           />
           <input className="inputs text-input"
           value={text}
-          name="text"
+          name="message"
           onChange= {handleInputChange}
+          onBlur={handleInputBlur}
+
           type="text"
           placeholder="Enter your message here"
           />

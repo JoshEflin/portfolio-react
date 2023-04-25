@@ -1,3 +1,4 @@
+import download from '../assets/Copy of Josh Eflin - Resume Update v2.pdf'
 export default function Resume() {
     return(
         <>
@@ -6,8 +7,8 @@ export default function Resume() {
         src="https://docs.google.com/document/d/e/2PACX-1vQe3rRIt8OqS_CvyEl-_gh2azjktITlmJAr4r4adHol1pgXHRKbvQ41nX0NDmPOOtWbqI-zSU2PhlSR/pub?embedded=true">
 
         </iframe>
-        <a href="https://docs.google.com/document/d/e/2PACX-1vQe3rRIt8OqS_CvyEl-_gh2azjktITlmJAr4r4adHol1pgXHRKbvQ41nX0NDmPOOtWbqI-zSU2PhlSR/pub"
-        >
+        <a href={download} download>
+        
         <h2>Download resume</h2>
         </a>
             </>
