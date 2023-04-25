@@ -17,7 +17,7 @@ const LinkComponent:React.FC<Links> =({github, deployed})=> {
 
   return(
     <ul className = 'link-list'>
-    <li className= 'link-list-item'>
+    <li className= 'link-list-item bold'>
       <a href={github} target= "_blank"> 
         <p>
           Check out the repository

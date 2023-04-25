@@ -149,12 +149,17 @@ button:focus-visible {
   
   
 }
-.tech-list-item, .link-list-item {
-  font-size: 1rem;
+ .link-list-item {
+  font-size: 1.5rem;
   
 }
+
 .link-list-item {
   max-height: 120px;
+}
+.tech-list-item {
+  font-size: larger;
+  font-weight: 500;
 }
 .git-hub-icon {
   max-height: 25%;
@@ -248,7 +253,6 @@ footer {
   flex-direction: column;
   
   gap:1rem;
-  width:50rem;
   align-items: center;
   justify-content: space-evenly;
   box-shadow: 4px 4px 8px 1px #00000075;
@@ -264,6 +268,21 @@ footer {
   font-family: 'League Spartan';
   font-size: 2em;
 
-  width:30rem;
+  width:inherit;
   border-color: var(--shamrock-green);
+}
+
+@media screen and (max-width: 600px){
+  .navbar{
+    flex-direction: column;
+  }
+  
+}
+@media screen and (max-width :500px) {
+  .link-list-item{
+    font-size: 1rem;
+  }
+  .tech-list{
+    flex-wrap: wrap;
+  }
 }
