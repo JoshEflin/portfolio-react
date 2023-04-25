@@ -7,6 +7,7 @@ This repository is my professional portfolio built with react and typescript usi
 
 ## Table of Contents
 - [License](#license)
+- [Screenshot](#screenshot)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -14,28 +15,32 @@ This repository is my professional portfolio built with react and typescript usi
 - [Questions](#Questions)
 
 ## License
- This repository is licensed under
-    MIT
- ## Installation
- there are no install steps
+This repository is licensed under
+   MIT
 
- ## Usage
- Use this repository to check out my skills
+## Screenshot
+![screenshot](./src/assets/portfolio-screenshot.png)
 
- ## Contributing
- Do not contribute to my portfolio
+## Installation
+there are no install steps
 
- ## Tests
- This application doesn't need tests
+## Usage
+Use this repository to check out my skills
 
- ## Questions
+## Contributing
+Do not contribute to my portfolio
 
- Feel free to peruse my git hub profile here:
- https://github.com/JoshEflin
+## Tests
+This application doesn't need tests
 
- Or send an email to:
- eflinjh@gmail.com
- with  any further questions.
+## Questions
+
+Feel free to peruse my git hub profile here:
+https://github.com/JoshEflin
+
+Or send an email to:
+eflinjh@gmail.com
+with  any further questions.
 
   
  
