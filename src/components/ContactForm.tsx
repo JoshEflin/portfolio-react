@@ -13,7 +13,7 @@ export default function ContactForm() {
       setFirstName(value);
     } else if (name === 'email') {
       setEmail(value);
-    } else if (name === 'text') {
+    } else if (name === 'message') {
       setText(value);
     }
   };
@@ -63,7 +63,7 @@ export default function ContactForm() {
         <form className="contact-form" onSubmit={handleFormSubmit}>
           <input className="inputs name-input"
             value={firstName}
-            name="First Name"
+            name="firstName"
             onChange={handleInputChange}
             onBlur={handleInputBlur}
 
