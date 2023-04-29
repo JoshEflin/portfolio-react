@@ -198,11 +198,12 @@ a > .active  :hover{
   color:var(--cool-gray)
 }
 
-footer ul {
+ footer ul {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-}
+  margin-left:-40px
+ } 
 /* .footer-section-el{
    min-height: 10%;
 } */

@@ -10,7 +10,7 @@ interface Links {
     github:string;
     deployed:string;
  }
- interface AppCardProps {
+interface AppCardProps {
   img:any
   description:string;
   techs: string[];
@@ -23,7 +23,7 @@ interface Links {
      links: {
              github:"https://github.com/JoshEflin/A-Bone-to-Pick",
              deployed:"https://josheflin.github.io/A-Bone-to-Pick/",
-         }
+        }
  }, {
     img:booboo,
      description:"A potlucking- or party-planning app for creating picnics (events), inviting your friends, and organizing which foods get put on the table!",
@@ -31,7 +31,7 @@ interface Links {
      links: {
              github:"https://github.com/JoshEflin/Hey-boo-boo",
              deployed:"https://lit-river-34902.herokuapp.com/",
-         }
+        }
 
  },{
     img:weatherApp,
@@ -40,7 +40,7 @@ interface Links {
      links: {
              github:"https://github.com/JoshEflin/five-day-outlook",
              deployed:"https://josheflin.github.io/five-day-outlook/",
-         }
+        }
  },{
     img:jQueryCal,
      description:"A simple calendar app made using JQuery and Bootstrap",
@@ -48,7 +48,7 @@ interface Links {
      links: {
              github:"https://github.com/JoshEflin/JQuery-Calendar",
              deployed:"https://josheflin.github.io/JQuery-Calendar/",
-         }
+        }
  },{
     img:blog,
      description:"A CMS style blog site for publishing articles, leaving comments, and interacting with tech content",
@@ -56,7 +56,7 @@ interface Links {
      links: {
              github:"https://github.com/JoshEflin/Tech-Blog-MVC",
              deployed:"https://smufduffwuffluff.herokuapp.com/",
-         }
+        }
  },{
     img:noteTaker,
      description:"This project is an excersize in reverse engineering a back end for a prebuilt front end web app that is designed to store notes for easy access at a later date. It utilzies express.js as well as uuid packages.",
@@ -64,7 +64,7 @@ interface Links {
      links: {
              github:"https://github.com/JoshEflin/Real-Good-Notes",
              deployed:"https://note-taker934823.herokuapp.com/",
-         }
+        }
  }]
 export type {Links, AppCardProps}
 export default data
