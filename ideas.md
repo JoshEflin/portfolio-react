@@ -6,7 +6,7 @@
 
 # interactive resume using state
 
-# full requirements
+
 
 Next Steps...
 Do about me
