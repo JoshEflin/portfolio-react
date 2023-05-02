@@ -98,8 +98,11 @@ button:focus-visible {
 } 
 /* ----NAV BAR STUFF--- */
 /* --------------------- */
-/* nav {
-  border-style: none;
+/* ---------------------*/
+
+
+/* nav { */
+  /* border-style: none; */
   /* min-height: 10%; 
 } */
 
@@ -137,7 +140,13 @@ button:focus-visible {
   width: '153.60px';
   height: '153.60px';
 }
+
+
+/* ------------------------------ */
 /* ----- appCard related styling */
+/* ------------------------------ */
+
+
 /* add a media query for hiding tech list items in smaller devices */
 .tech-list, .link-list {
   margin-left: 0;
@@ -181,8 +190,16 @@ button:focus-visible {
     padding:5px;
 }
 
-/* ABOUT ME */
+
+
+/* ---------------- */
+/*----- ABOUT ME--- */
+/* ---------------- */
+
+
+
 .about-me {
+
   max-height: 66%;
   position: relative;
   margin-top: -4%;
@@ -198,6 +215,14 @@ a > .active  :hover{
   color:var(--cool-gray)
 }
 
+
+/* -------------- */
+/* ----Footer---- */
+/* -------------- */
+
+
+
+
  footer ul {
   display: flex;
   justify-content: space-around;
@@ -207,7 +232,9 @@ a > .active  :hover{
 /* .footer-section-el{
    min-height: 10%;
 } */
-
+footer {
+  bottom:0;
+  }
 footer img {
   height: 1.75rem;
 }
@@ -234,9 +261,13 @@ footer img {
 h2 {
   font-size: 2.25rem;
 }
-footer {
-  bottom:0;
-  }
+
+
+/* -------------- */
+/* ----Contact--- */
+/* --------------- */
+
+
 
 .contact-container {
   height:65vh;
@@ -250,13 +281,15 @@ footer {
   flex:1
 }
 .contact-form  {
+  padding:5rem;
+  border-radius: 5px;
   display:flex;
   flex-direction: column;
   
   gap:1rem;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 4px 4px 8px 1px #00000075;
+  box-shadow: 4px 4px 8px 5px #00000075;
   border-radius: 2px;
 
 }
@@ -285,5 +318,9 @@ footer {
   }
   .tech-list{
     flex-wrap: wrap;
+  }
+  .contact-container{
+    width:50vw
+
   }
 }
