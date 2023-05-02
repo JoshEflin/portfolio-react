@@ -302,7 +302,7 @@ h2 {
   font-family: 'League Spartan';
   font-size: 2em;
 
-  width:inherit;
+  width:70%;
   border-color: var(--shamrock-green);
 }
 
@@ -319,8 +319,10 @@ h2 {
   .tech-list{
     flex-wrap: wrap;
   }
-  .contact-container{
+  /* .contact-container{
     width:50vw
-
+  } */
+  .contact-form{
+    padding:1rem;
   }
 }
