@@ -86,7 +86,7 @@ export default function ContactForm() {
           onBlur={handleInputBlur}
 
           type="text"
-          placeholder="Enter your message here"
+          placeholder="Enter  message"
           />
           <button type="submit"> 
             Submit
