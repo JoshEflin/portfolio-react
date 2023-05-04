@@ -321,6 +321,10 @@ h2 {
   .navbar {
     flex-direction: column;
   }
+  .flex{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 500px) {
   .link-list-item {
