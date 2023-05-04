@@ -1,76 +1,110 @@
-import gitHubIcon from '../assets/github-mark.png'
-import { Links, AppCardProps } from './data/appCardData';
-import React from 'react';
+import gitHubIcon from "../assets/github-mark.png";
+import { Links, AppCardProps } from "./data/appCardData";
+import React from "react";
 
-
-const TechComponent: React.FC<{techs:string[]}> = ( {techs} ) => {
+const TechComponent: React.FC<{ techs: string[] }> = ({ techs }) => {
   return (
-    <ul className = 'tech-list'>
+    <ul className="tech-list">
       {techs.map((tech, index) => (
-        <li className='tech-list-item' key={index}>{tech}</li>
+        <li className="tech-list-item" key={index}>
+          {tech}
+        </li>
       ))}
     </ul>
   );
 };
 
-const LinkComponent:React.FC<Links> =({github, deployed})=> {
-
-  return(
-    <ul className = 'link-list'>
-    <li className= 'link-list-item bold'>
-      <a href={github} target= "_blank"> 
-        <p>
-          Check out the repository
-        </p>
-        <img className= 'git-hub-icon'src = {gitHubIcon}/>
-      </a>
-      
-    </li>
-    <li className='link-list-item'>
-      <a href = {deployed} target= '_blank'> 
-        <p>
-          Deployed Application
-        </p>
-        <i id = 'plane-icon' className="fa-regular fa-paper-plane"></i>
-      </a>
-    </li>
-      </ul>
-      )
-  }
-  // Below function is to split up large text descriptions into smaller p tags to append. need to split strings on whitespace though
-  const DescriptionComponent:React.FC<{description:string}> = ({description}) =>{
-    if (description.length > 100){
-      const halfway= Math.floor(description.length/2)
-      const whitespace= description.indexOf(' ', halfway)
-      console.log(whitespace)
-      return(
-        <>
-        <p>{description.substring( 0,whitespace)}</p>
-        <p>{description.substring( whitespace, description.length)}</p>
-      
-        </>
-      )
-    } else{
-      return <p>{description}</p>
-    }
-  }
-  // this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
-
-export default function AppCard({data}:{data:AppCardProps[]}) {
-    
-    return(
-    <>
-    {console.log (data)}
-      {data.map(({img, description, techs, links:{deployed, github}}: AppCardProps, index)=>(
-        <div key ={index} className='appCard'>
-        <img className = 'appCard-img'src ={img} />
-        <DescriptionComponent description= {description} />
-        <TechComponent techs = {techs} />
-        <LinkComponent github ={github} deployed = {deployed} />
-     
+const LinkComponent: React.FC<Links> = ({ github, deployed }) => {
+  return (
+    <ul className="link-list">
+      <li className="link-list-item bold">
+        <a href={github} target="_blank">
+          <p>Check out the repository</p>
+          <img className="git-hub-icon" src={gitHubIcon} />
+        </a>
+      </li>
+      <li className="link-list-item">
+        <a href={deployed} target="_blank">
+          <p>Deployed Application</p>
+          <i id="plane-icon" className="fa-regular fa-paper-plane"></i>
+        </a>
+      </li>
+    </ul>
+  );
+};
+const handleStringSplit = (str: String) => {
+  const halfway = Math.floor(str.length / 2);
+  const whitespace = str.indexOf(" ", halfway);
+  const first = str.substring(0, whitespace);
+  const second = str.substring(whitespace, str.length);
+  return {  firstHalf:first, secondHalf:second };
+};
+// Below function is to split up large text descriptions into smaller p tags to append. need to split strings on whitespace though
+const DescriptionComponent: React.FC<{ description: string }> = ({
+  description,
+}) => {
+  if (description.length > 75) {
+    // const halfway = Math.floor(description.length / 2);
+    // const whitespace = description.indexOf(" ", halfway);
+    // const firstHalf = description.substring(0, whitespace);
+    // const secondHalf = description.substring(whitespace, description.length);
+    const { firstHalf, secondHalf } = handleStringSplit(description);
+    if (firstHalf.length > 75) {
+      const firstStrHalf = handleStringSplit(firstHalf);
+      const secondStrHalf = handleStringSplit(secondHalf);
+      return (
+        <div className="description-card">
+          <h2> Project Description</h2>
+          <p> {firstStrHalf.firstHalf}</p>
+          <p> {firstStrHalf.secondHalf}</p>
+          <p> {secondStrHalf.firstHalf}</p>
+          <p> {secondStrHalf.secondHalf}</p>
         </div>
-        ))}
-    </>
-    )
+      );
+    } else {
+      return (
+        <div className="description-card">
+          <h2> Project Description</h2>
+          <p>{firstHalf}</p>
+          <p>{secondHalf}</p>
+        </div>
+      );
+    }
+  } else {
+    
+    return (
+      <div className="description-card">
+      <h2>Project Description</h2>
+      <p>{description}</p>
+    </div>);
+  }
+};
+// this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
 
+export default function AppCard({ data }: { data: AppCardProps[] }) {
+  return (
+    <>
+      {console.log(data)}
+      {data.map(
+        (
+          {
+            img,
+            description,
+            techs,
+            links: { deployed, github },
+          }: AppCardProps,
+          index
+        ) => (
+          <div key={index} className="appCard">
+            <div className="flex appCard-top">
+              <DescriptionComponent description={description} />
+              <img className="appCard-img" src={img} />
+            </div>
+            <TechComponent techs={techs} />
+            <LinkComponent github={github} deployed={deployed} />
+          </div>
+        )
+      )}
+    </>
+  );
 }
