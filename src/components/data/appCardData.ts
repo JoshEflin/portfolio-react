@@ -43,7 +43,7 @@ interface AppCardProps {
         }
  },{
     img:jQueryCal,
-     description:"A simple calendar app made using JQuery and Bootstrap",
+     description:"A simple calendar app made using JQuery and Bootstrap. The user can add items to their daily to-do list. The user can rest the Calendar daily, as time passes the fields change color depending on the hour.",
      techs:['Bootstrap','JQuery'],
      links: {
              github:"https://github.com/JoshEflin/JQuery-Calendar",
@@ -51,7 +51,7 @@ interface AppCardProps {
         }
  },{
     img:blog,
-     description:"A CMS style blog site for publishing articles, leaving comments, and interacting with tech content",
+     description:"A CMS style blog site for publishing articles and  leaving comments. User's must log in in order to make posts or leave comments. This full stack Application uses the Handlebars view engine.",
      techs:['Handlebars','Node.js','Express.js','sequelize','express-session',],
      links: {
              github:"https://github.com/JoshEflin/Tech-Blog-MVC",
@@ -60,7 +60,7 @@ interface AppCardProps {
  },{
     img:noteTaker,
      description:"This project is an excersize in reverse engineering a back end for a prebuilt front end web app that is designed to store notes for easy access at a later date. It utilzies express.js as well as uuid packages.",
-     techs:['Node.js','Express.js','uuid'],
+     techs:['Node.js','Express.js','UUID'],
      links: {
              github:"https://github.com/JoshEflin/Real-Good-Notes",
              deployed:"https://note-taker934823.herokuapp.com/",
