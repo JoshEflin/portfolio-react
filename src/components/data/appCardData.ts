@@ -4,6 +4,7 @@ import weatherApp from '../../assets/desktop-weather-app.png'
 import jQueryCal from '../../assets/JQuery Calender.png'
 import blog from '../../assets/Tech-nollege-E.png'
 import noteTaker from '../../assets/note-taker.png'
+import JAD from '../../assets/JAD.png'
 
 
 interface Links {
@@ -17,6 +18,14 @@ interface AppCardProps {
   links: Links
  }
  const data:AppCardProps[] = [{
+     img:JAD,
+     description:"An online grocery store for people who don't want the hassle of waiting in a line or interacting with other humans!",
+     techs:['React', 'TailwindCSS', 'MongoDB', 'Express','Node' ,'Edamam API'],
+     links: {
+             github:"https://github.com/JoshEflin/JAD",
+             deployed:"https://groceryjad.herokuapp.com/",
+        }
+ }, {
      img:dogCard,
      description:"A front-end only dog adoption web-app that turns data from petfinder's API and apiNinja's Dog Breed API into trading cards",
      techs:['JQuery', 'Bulma', 'Adobe Express', 'Petfinder API', 'Dogs API'],
