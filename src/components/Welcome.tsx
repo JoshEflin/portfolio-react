@@ -19,9 +19,9 @@ export default function Welcome() {
               loop
         /> */}
       </div>
-      <a href= "https://github.com/JoshEflin" target="_blank">
+      {/* <a href= "https://github.com/JoshEflin" target="_blank">
       <button>GitHub</button>
-        </a>
+        </a> */}
       </div>
     )
   }

@@ -27,13 +27,10 @@ const renderPage = () =>{
     if (currentView === 'Projects'){
         return <AppCard data={data} />
     }
-    if(currentView===null) {
-
-    }
 }
 function handleView(view:string){
  return  setCurrentView(view)
-// return setCurrentView(null)
+
 
 }
 
@@ -41,7 +38,6 @@ return( <>
     <Nav currentView={currentView} handleView={handleView} />
 <div id="view-window">
     {renderPage()}
-    {/* <Footer /> */}
 </div>
 
 </>

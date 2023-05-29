@@ -25,16 +25,6 @@ const NavItem: React.FC<{currentView:string ,navLink:string[], handleView:any}> 
 }
 export default function Nav(props:navProps):JSX.Element{
  const {currentView, handleView} = props;
-//  const [clicked, setClicked] =useState(false)
- 
-//  function handleClick(){
-//   if(clicked){
-//     // change color of text or do something else neat
-//   }else {
-//     // do nothing
-//   }
-//   setClicked(!clicked)
-//  }
 
     return (
         <nav>

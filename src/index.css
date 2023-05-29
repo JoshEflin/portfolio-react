@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  font-family: "League Spartan", Inter, system-ui, Avenir, Helvetica, Arial,
+  font-family: 'League Spartan', Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -83,8 +83,8 @@ button:focus-visible {
     background: rgba(17, 19, 37, 0.8);
     color: var(--steel-blue);
   }
-  a{
-    color:var(--SVG)
+  a {
+    color: var(--SVG);
   }
   a:hover {
     color: var(--shamrock-green);
@@ -99,11 +99,11 @@ button:focus-visible {
     background-color: rgb(25, 16, 34);
     border-color: var(--cool-gray);
   }
-  .link-list-item>a {
-    color:var(--shamrock-green)
+  .link-list-item > a {
+    color: var(--shamrock-green);
   }
-  .link-list-item>a:hover {
-    color:var(--SVG)
+  .link-list-item > a:hover {
+    color: var(--SVG);
   }
 }
 /* ----NAV BAR STUFF--- */
@@ -123,13 +123,12 @@ button:focus-visible {
 } */
 
 .navbar {
-  
   margin-left: 0;
   list-style-type: none;
   padding-left: 0;
   display: flex;
   flex-direction: row;
-  font-family: "League Spartan";
+  font-family: 'League Spartan';
   font-weight: 600;
   font-size: 1.75rem;
   justify-content: space-evenly;
@@ -147,8 +146,9 @@ button:focus-visible {
 /* for some reason the below code only works if used as inline style... */
 #svg-display {
   display: inline-block;
-  width: "153.60px";
-  height: "153.60px";
+
+  width: '153.60px';
+  height: '153.60px';
 }
 
 /* ------------------------------ */
@@ -191,7 +191,6 @@ button:focus-visible {
     rgba(79, 50, 50, 0.01) 100%
   );
   border-radius: 5px;
-  
 }
 .appCard-img {
   aspect-ratio: 1/1;
@@ -201,17 +200,14 @@ button:focus-visible {
   padding: 5px;
   border-radius: 5%;
 }
-.appCard-img:hover{
-
+.appCard-img:hover {
 }
 
 .appCard-top {
   justify-content: space-around;
   padding-top: 20px;
-  
 }
 .description-card {
-
 }
 
 /* ---------------- */
@@ -248,7 +244,7 @@ footer ul {
    min-height: 10%;
 } */
 footer {
-  bottom: 0;
+  margin-top: 300px;
 }
 footer img {
   height: 1.75rem;
@@ -310,7 +306,7 @@ h2 {
 }
 .inputs {
   border-radius: 5px;
-  font-family: "League Spartan";
+  font-family: 'League Spartan';
   font-size: 2em;
 
   width: 70%;
@@ -321,9 +317,15 @@ h2 {
   .navbar {
     flex-direction: column;
   }
-  .flex{
+  .flex {
     flex-direction: column;
     align-items: center;
+  }
+  #footer {
+    margin-top: 200px;
+  }
+  #svg-display {
+    margin: auto;
   }
 }
 @media screen and (max-width: 500px) {
@@ -338,5 +340,8 @@ h2 {
   } */
   .contact-form {
     padding: 1rem;
+  }
+  #footer {
+    margin-top: 100px;
   }
 }
