@@ -5,6 +5,7 @@ import jQueryCal from '../../assets/JQuery Calender.png'
 import blog from '../../assets/Tech-nollege-E.png'
 import noteTaker from '../../assets/note-taker.png'
 import JAD from '../../assets/JAD.png'
+import Bone2 from '../../assets/bone2.png'
 
 
 interface Links {
@@ -18,6 +19,15 @@ interface AppCardProps {
   links: Links
  }
  const data:AppCardProps[] = [{
+        img:Bone2,
+        description:"A Refactor of the Original Bone-To Pick Application using the MERN stack",
+        techs:['React', 'Ant Design', 'MongoDB', 'Express','Node' ,'Petfinder API'],
+        links: {
+                github:"https://github.com/JoshEflin/A-Bone-To-Pick-V.2",
+                deployed:"https://a-bone-to-pick.herokuapp.com/",
+           }
+    },
+    {
      img:JAD,
      description:"An online grocery store for people who don't want the hassle of waiting in a line or interacting with other humans!",
      techs:['React', 'TailwindCSS', 'MongoDB', 'Express','Node' ,'Edamam API'],
@@ -66,14 +76,16 @@ interface AppCardProps {
              github:"https://github.com/JoshEflin/Tech-Blog-MVC",
              deployed:"https://smufduffwuffluff.herokuapp.com/",
         }
- },{
-    img:noteTaker,
-     description:"This project is an excersize in reverse engineering a back end for a prebuilt front end web app that is designed to store notes for easy access at a later date. It utilzies express.js as well as uuid packages.",
-     techs:['Node.js','Express.js','UUID'],
-     links: {
-             github:"https://github.com/JoshEflin/Real-Good-Notes",
-             deployed:"https://note-taker934823.herokuapp.com/",
-        }
- }]
+ },
+//  {
+//     img:noteTaker,
+//      description:"This project is an excersize in reverse engineering a back end for a prebuilt front end web app that is designed to store notes for easy access at a later date. It utilzies express.js as well as uuid packages.",
+//      techs:['Node.js','Express.js','UUID'],
+//      links: {
+//              github:"https://github.com/JoshEflin/Real-Good-Notes",
+//              deployed:"https://note-taker934823.herokuapp.com/",
+//         }
+//  }
+]
 export type {Links, AppCardProps}
 export default data
