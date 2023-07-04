@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-  font-family: 'League Spartan', Inter, system-ui, Avenir, Helvetica, Arial,
+  font-family: "League Spartan", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -128,7 +128,7 @@ button:focus-visible {
   padding-left: 0;
   display: flex;
   flex-direction: row;
-  font-family: 'League Spartan';
+  font-family: "League Spartan";
   font-weight: 600;
   font-size: 1.75rem;
   justify-content: space-evenly;
@@ -147,8 +147,8 @@ button:focus-visible {
 #svg-display {
   display: inline-block;
 
-  width: '153.60px';
-  height: '153.60px';
+  width: "153.60px";
+  height: "153.60px";
 }
 
 /* ------------------------------ */
@@ -306,7 +306,7 @@ h2 {
 }
 .inputs {
   border-radius: 5px;
-  font-family: 'League Spartan';
+  font-family: "League Spartan";
   font-size: 2em;
 
   width: 70%;

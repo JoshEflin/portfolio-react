@@ -37,7 +37,7 @@ const handleStringSplit = (str: String) => {
   const whitespace = str.indexOf(" ", halfway);
   const first = str.substring(0, whitespace);
   const second = str.substring(whitespace, str.length);
-  return {  firstHalf:first, secondHalf:second };
+  return { firstHalf: first, secondHalf: second };
 };
 // Below function is to split up large text descriptions into smaller p tags to append. need to split strings on whitespace though
 const DescriptionComponent: React.FC<{ description: string }> = ({
@@ -71,12 +71,12 @@ const DescriptionComponent: React.FC<{ description: string }> = ({
       );
     }
   } else {
-    
     return (
       <div className="description-card">
-      <h2>Project Description</h2>
-      <p>{description}</p>
-    </div>);
+        <h2>Project Description</h2>
+        <p>{description}</p>
+      </div>
+    );
   }
 };
 // this makes one CARD, use state here, when user clicks, state is changes, and props for app card change
