@@ -1,14 +1,40 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import {
+  useState,
+  ChangeEvent,
+  FormEvent,
+  FormEventHandler,
+  ChangeEventHandler,
+  SetStateAction,
+} from "react";
+import ContactInput from "./ContactInput";
 
+interface ContactInputProps {
+  name: string;
+  className: string;
+  value: string;
+  handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleInputBlur: (e: ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
+}
 export default function ContactForm() {
+  // const [formData, setFormData] = useState({
+  //   firstName: "",
+  //   email: "",
+  //   message: "",
+  // });
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
-  const [requiredField, setRequiredField] = useState("");
+  const [requiredField, setRequiredField] = useState(false);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    if (name === "firstName") {
+    console.log(e.target);
+    // setFormData((prevData) => ({
+    //   ...prevData,
+    //   [name]: value,
+    // }));
+    if (name === "first Name") {
       setFirstName(value);
     } else if (name === "email") {
       setEmail(value);
@@ -17,15 +43,44 @@ export default function ContactForm() {
     }
   };
   const handleInputBlur = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    console.log(e.target);
+    const { name, value, id } = e.target;
+    console.log(e.target.value);
     if (value === "") {
       console.log("here");
-      alert(`The ${name} field is required`);
-      setRequiredField(name);
+      // alert(`The ${name} field is required`);
+
+      setRequiredField(true);
+    } else {
+      setRequiredField(false);
     }
   };
   // return name ==='firstName'? setFirstName(value): setEmail(value)
+  const contactProps: ContactInputProps[] = [
+    {
+      name: "first Name",
+      className: "first-name",
+      value: firstName,
+      handleInputBlur: handleInputBlur,
+      handleInputChange: handleInputChange,
+      placeholder: "First Name",
+    },
+    {
+      name: "email",
+      className: "email",
+      value: email,
+      handleInputBlur: handleInputBlur,
+      handleInputChange: handleInputChange,
+      placeholder: "Email",
+    },
+    {
+      name: "message",
+      className: "text-input",
+      value: text,
+      handleInputBlur: handleInputBlur,
+      handleInputChange: handleInputChange,
+      placeholder: "message",
+    },
+  ];
 
   const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
@@ -67,33 +122,10 @@ export default function ContactForm() {
   return (
     <div className="contact-container">
       <form className="contact-form" onSubmit={handleFormSubmit}>
-        <input
-          className="inputs name-input"
-          value={firstName}
-          name="firstName"
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          className="inputs email-input"
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          className="inputs text-input"
-          value={text}
-          name="message"
-          onChange={handleInputChange}
-          onBlur={handleInputBlur}
-          type="text"
-          placeholder="Enter  message"
-        />
+        <h2>Fill out the form!</h2>
+        {contactProps.map((contact: ContactInputProps, i) => {
+          return <ContactInput key={i} {...contact} />;
+        })}
         <button type="submit">Submit</button>
       </form>
     </div>
