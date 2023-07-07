@@ -77,7 +77,10 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+#silly-photo {
+  height: 60vh;
+  object-fit: contain;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     background: rgba(17, 19, 37, 0.8);
@@ -117,8 +120,9 @@ button:focus-visible {
 
 /* TO DO toggle wrapper on and off to figuer out which layout i like best */
 /* .wrapper {
-  margin:auto;
-  padding:0;
+  position: relative;
+  margin: auto;
+  padding: 0;
   min-height: 100vh;
 } */
 
@@ -244,7 +248,7 @@ footer ul {
    min-height: 10%;
 } */
 footer {
-  margin-top: 300px;
+  margin-top: 200px;
 }
 footer img {
   height: 1.75rem;
@@ -285,12 +289,16 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+.contact-view {
+  display: flex;
+  justify-content: space-around;
+}
 .contact-container > * {
   flex: 1;
 }
 .contact-form {
   padding: 3rem;
-  /* margin: 2rem; */
+  margin: 2rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -318,6 +326,9 @@ h2 {
 }
 .name-input {
 }
+/* #footer {
+  margin-top: 0;
+} */
 @media screen and (max-width: 600px) {
   .navbar {
     flex-direction: column;

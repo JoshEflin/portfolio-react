@@ -7,6 +7,7 @@ import {
   SetStateAction,
 } from "react";
 import ContactInput from "./ContactInput";
+import sillyPhoto from "../assets/JoshEflin_Headshot_0399.jpg";
 
 interface ContactInputProps {
   name: string;
@@ -15,25 +16,18 @@ interface ContactInputProps {
   handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
   handleInputBlur: (e: ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
+  active: boolean;
 }
 export default function ContactForm() {
-  // const [formData, setFormData] = useState({
-  //   firstName: "",
-  //   email: "",
-  //   message: "",
-  // });
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
-  const [requiredField, setRequiredField] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     console.log(e.target);
-    // setFormData((prevData) => ({
-    //   ...prevData,
-    //   [name]: value,
-    // }));
+
     if (name === "first Name") {
       setFirstName(value);
     } else if (name === "email") {
@@ -47,11 +41,11 @@ export default function ContactForm() {
     console.log(e.target.value);
     if (value === "") {
       console.log("here");
-      // alert(`The ${name} field is required`);
+      alert(`The ${name} field is required`);
 
-      setRequiredField(true);
+      setIsActive(true);
     } else {
-      setRequiredField(false);
+      setIsActive(false);
     }
   };
   // return name ==='firstName'? setFirstName(value): setEmail(value)
@@ -63,6 +57,7 @@ export default function ContactForm() {
       handleInputBlur: handleInputBlur,
       handleInputChange: handleInputChange,
       placeholder: "First Name",
+      active: isActive,
     },
     {
       name: "email",
@@ -71,6 +66,7 @@ export default function ContactForm() {
       handleInputBlur: handleInputBlur,
       handleInputChange: handleInputChange,
       placeholder: "Email",
+      active: isActive,
     },
     {
       name: "message",
@@ -79,6 +75,7 @@ export default function ContactForm() {
       handleInputBlur: handleInputBlur,
       handleInputChange: handleInputChange,
       placeholder: "message",
+      active: isActive,
     },
   ];
 
@@ -120,14 +117,17 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="contact-container">
-      <form className="contact-form" onSubmit={handleFormSubmit}>
-        <h2>Fill out the form!</h2>
-        {contactProps.map((contact: ContactInputProps, i) => {
-          return <ContactInput key={i} {...contact} />;
-        })}
-        <button type="submit">Submit</button>
-      </form>
+    <div className=" contact-view">
+      <img id="silly-photo" src={sillyPhoto} alt="a silly photo"></img>
+      <div className="contact-container">
+        <form className="contact-form" onSubmit={handleFormSubmit}>
+          <h2>Fill out the form!</h2>
+          {contactProps.map((contact: ContactInputProps, i) => {
+            return <ContactInput key={i} {...contact} />;
+          })}
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
