@@ -40,21 +40,19 @@ const handleStringSplit = (str: String) => {
   return { firstHalf: first, secondHalf: second };
 };
 // Below function is to split up large text descriptions into smaller p tags to append. need to split strings on whitespace though
-const DescriptionComponent: React.FC<{ description: string }> = ({
-  description,
-}) => {
+const DescriptionComponent: React.FC<{
+  title: string;
+  description: string;
+}> = ({ title, description }) => {
   if (description.length > 75) {
-    // const halfway = Math.floor(description.length / 2);
-    // const whitespace = description.indexOf(" ", halfway);
-    // const firstHalf = description.substring(0, whitespace);
-    // const secondHalf = description.substring(whitespace, description.length);
     const { firstHalf, secondHalf } = handleStringSplit(description);
     if (firstHalf.length > 75) {
       const firstStrHalf = handleStringSplit(firstHalf);
       const secondStrHalf = handleStringSplit(secondHalf);
+      console.log(title);
       return (
         <div className="description-card">
-          <h2> Project Description</h2>
+          <h2> {title}</h2>
           <p> {firstStrHalf.firstHalf}</p>
           <p> {firstStrHalf.secondHalf}</p>
           <p> {secondStrHalf.firstHalf}</p>
@@ -64,7 +62,7 @@ const DescriptionComponent: React.FC<{ description: string }> = ({
     } else {
       return (
         <div className="description-card">
-          <h2> Project Description</h2>
+          <h2> {title}</h2>
           <p>{firstHalf}</p>
           <p>{secondHalf}</p>
         </div>
@@ -73,7 +71,7 @@ const DescriptionComponent: React.FC<{ description: string }> = ({
   } else {
     return (
       <div className="description-card">
-        <h2>Project Description</h2>
+        <h2>{title}</h2>
         <p>{description}</p>
       </div>
     );
@@ -88,6 +86,7 @@ export default function AppCard({ data }: { data: AppCardProps[] }) {
       {data.map(
         (
           {
+            title,
             img,
             description,
             techs,
@@ -97,7 +96,7 @@ export default function AppCard({ data }: { data: AppCardProps[] }) {
         ) => (
           <div key={index} className="appCard">
             <div className="flex appCard-top">
-              <DescriptionComponent description={description} />
+              <DescriptionComponent title={title} description={description} />
               <img className="appCard-img" src={img} />
             </div>
             <TechComponent techs={techs} />
