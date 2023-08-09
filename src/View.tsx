@@ -24,7 +24,11 @@ export default function View() {
       return <Resume />;
     }
     if (currentView === "Projects") {
-      return <AppCard data={data} />;
+      return (
+        <section className="app-card">
+          <AppCard data={data} />
+        </section>
+      );
     }
   };
   function handleView(view: string) {
