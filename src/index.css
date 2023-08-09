@@ -126,8 +126,8 @@ button:focus-visible {
   height: 100px;
   background: radial-gradient(
     circle,
-    rgba(142, 442, 90, 0.11) 0%,
-    rgba(142, 142, 90, 0.01) 100%
+    hsla(2, 24%, 28%, 0.15) 0%,
+    hsla(0, 22%, 25%, 0.01) 100%
   );
 }
 /* TO DOset media query for 600px HAMBURGER MENU AND SVG element must do something different */
@@ -180,8 +180,8 @@ button:focus-visible {
   height: 50%;
   background: radial-gradient(
     circle,
-    rgba(89, 55, 54, 0.15) 0%,
-    rgba(79, 50, 50, 0.01) 100%
+    hsla(2, 24%, 28%, 0.15) 0%,
+    hsla(0, 22%, 25%, 0.01) 100%
   );
   border-radius: 5px;
 }
