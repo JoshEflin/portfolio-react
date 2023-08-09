@@ -1,7 +1,5 @@
 import download from "../assets/JoshEflin-Resume.pdf";
 export default function Resume() {
-  // const resumeSrc =
-  //   '<iframe src="https://docs.google.com/document/d/e/2PACX-1vQB3JreeBWyoSghI53Y1h3fBy2-wxv-nehKha7qlfSJmUswkRbKiOFCx2ydM1UDow/pub?embedded=true"></iframe>';
   return (
     <>
       <h2> Resume and Skills</h2>
@@ -12,5 +10,3 @@ export default function Resume() {
     </>
   );
 }
-//NEW RESUME(not working yet)
-//  https://docs.google.com/document/d/e/2PACX-1vQB3JreeBWyoSghI53Y1h3fBy2-wxv-nehKha7qlfSJmUswkRbKiOFCx2ydM1UDow/pub

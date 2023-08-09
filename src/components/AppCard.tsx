@@ -81,7 +81,7 @@ const DescriptionComponent: React.FC<{
 
 export default function AppCard({ data }: { data: AppCardProps[] }) {
   return (
-    <>
+    <section className="app-card">
       {console.log(data)}
       {data.map(
         (
@@ -104,6 +104,6 @@ export default function AppCard({ data }: { data: AppCardProps[] }) {
           </div>
         )
       )}
-    </>
+    </section>
   );
 }

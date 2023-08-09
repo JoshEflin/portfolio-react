@@ -6,7 +6,7 @@ export default function J({ currentView, handleView }: navProps) {
       id="svg-display"
       href="#Welcome"
       onClick={() => handleView("Welcome")}
-      style={{ display: "inline-block", width: "153.60px", height: "153.60px" }}
+      style={{ display: "inline-block", width: "100px", height: "100px" }}
     >
       <svg
         viewBox="-12.8 -12.8 153.60 153.60"

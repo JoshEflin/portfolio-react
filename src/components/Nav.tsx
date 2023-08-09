@@ -35,7 +35,8 @@ export default function Nav(props: navProps): JSX.Element {
   const { currentView, handleView } = props;
 
   return (
-    <nav>
+    <nav className="nav-container">
+      {/* <div > */}
       <ul className="navbar">
         <J currentView={currentView} handleView={handleView} />
         <NavItem
@@ -44,6 +45,7 @@ export default function Nav(props: navProps): JSX.Element {
           navLink={navItemsArr}
         />
       </ul>
+      {/* </div> */}
     </nav>
   );
 }

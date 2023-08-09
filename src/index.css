@@ -5,9 +5,9 @@
   line-height: 1.5;
   font-weight: 400;
   /* HSL COLORS */
-  --cool-gray: rgba(142, 142, 190, 0.331);
-  --shamrock-green: hsla(142, 37%, 45%, 1);
-  --rose-ebony: rgba(89, 55, 54, 0.147);
+  --cool-gray: hsla(240, 27%, 65%, 0.331);
+  --blue-grey: hsl(216, 46%, 47%);
+  --rose-ebony: hsla(2, 24%, 28%, 0.147);
   --light-cyan: hsla(175, 42%, 90%, 1);
   --steel-blue: hsla(204, 72%, 45%, 1);
   --SVG: #a02929;
@@ -15,11 +15,11 @@
 
   background: linear-gradient(
     90deg,
-    rgba(142, 142, 190, 0.25) 0%,
-    rgba(219, 240, 238, 0.5) 55%,
-    rgba(146, 147, 193, 0.05) 100%
+    hsla(240, 27%, 65%, 0.25) 0%,
+    hsla(174, 41%, 90%, 0.5) 55%,
+    hsla(239, 27%, 66%, 0.05) 100%
   );
-  color: hsla(204, 72%, 45%, 1);
+  color: hsla(var(--steel-blue));
   margin: auto;
   box-sizing: border-box;
 
@@ -28,6 +28,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.column {
+  flex-direction: column;
 }
 .flex {
   display: flex;
@@ -38,7 +45,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--shamrock-green);
+  color: var(--blue-grey);
 }
 
 .container {
@@ -55,6 +62,7 @@ body {
 h1 {
   font-size: 3.5rem;
   line-height: 1.1;
+  color: var(--blue-grey);
 }
 
 button {
@@ -69,7 +77,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: var(--shamrock-green);
+  border-color: var(--blue-grey);
   background-color: var(--rose-ebony);
   color: var(--light-cyan);
 }
@@ -81,34 +89,7 @@ button:focus-visible {
   height: 60vh;
   object-fit: contain;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    background: rgba(17, 19, 37, 0.8);
-    color: var(--steel-blue);
-  }
-  a {
-    color: var(--SVG);
-  }
-  a:hover {
-    color: var(--shamrock-green);
-  }
-  .active :hover {
-    color: var(--cool-gray);
-  }
-  button {
-    background-color: var(--cool-gray);
-  }
-  button:hover {
-    background-color: rgb(25, 16, 34);
-    border-color: var(--cool-gray);
-  }
-  .link-list-item > a {
-    color: var(--shamrock-green);
-  }
-  .link-list-item > a:hover {
-    color: var(--SVG);
-  }
-}
+
 /* ----NAV BAR STUFF--- */
 /* --------------------- */
 /* ---------------------*/
@@ -119,12 +100,14 @@ button:focus-visible {
 } */
 
 /* TO DO toggle wrapper on and off to figuer out which layout i like best */
-/* .wrapper {
-  position: relative;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: auto;
   padding: 0;
   min-height: 100vh;
-} */
+}
 
 .navbar {
   margin-left: 0;
@@ -137,7 +120,16 @@ button:focus-visible {
   font-size: 1.75rem;
   justify-content: space-evenly;
 }
-
+.nav-container {
+  border: 3px;
+  border-radius: 5px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(142, 442, 90, 0.11) 0%,
+    rgba(142, 142, 90, 0.01) 100%
+  );
+}
 /* TO DOset media query for 600px HAMBURGER MENU AND SVG element must do something different */
 /* TO DO media qqueery at 700 px to fix text wrapping in AppCards */
 .bg-img {
@@ -148,18 +140,15 @@ button:focus-visible {
   list-style: none;
 }
 /* for some reason the below code only works if used as inline style... */
-#svg-display {
-  display: inline-block;
-
-  width: "153.60px";
-  height: "153.60px";
-}
 
 /* ------------------------------ */
 /* ----- appCard related styling */
 /* ------------------------------ */
 
 /* add a media query for hiding tech list items in smaller devices */
+.app-card {
+  margin-top: 5%;
+}
 .tech-list,
 .link-list {
   margin-left: 0;
@@ -219,16 +208,19 @@ button:focus-visible {
 /* ---------------- */
 
 .about-me {
-  max-height: 66%;
-  position: relative;
-  margin-top: -4%;
+  margin-top: 3%;
+}
+.about-me-text {
+  color: var(--blue-grey);
+  max-width: 50%;
 }
 #headshot {
   aspect-ratio: 1024/1536;
   max-height: 400px;
+  margin-top: 0;
 }
 .active {
-  color: var(--shamrock-green);
+  color: var(--blue-grey);
 }
 a > .active :hover {
   color: var(--cool-gray);
@@ -248,7 +240,7 @@ footer ul {
    min-height: 10%;
 } */
 footer {
-  margin-top: 200px;
+  margin-top: 50px;
 }
 footer img {
   height: 1.75rem;
@@ -258,10 +250,10 @@ footer img {
 }
 #footer {
   /* position:fixed; */
-  bottom: 0;
+  /* bottom: 5%; */
   border-radius: 5px;
   /* background-color: var(--steel-blue); */
-  margin-bottom: 0px;
+  margin-bottom: 25px;
   min-height: 10%;
   width: 100%;
   list-style: none;
@@ -271,7 +263,7 @@ footer img {
 } */
 #resume {
   min-width: 65%;
-  height: 110vh;
+  height: 75vh;
 }
 h2 {
   font-size: 2.25rem;
@@ -337,8 +329,9 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
-  #footer {
-    margin-top: 200px;
+  .nav-container {
+    padding: 5px;
+    border-color: var(--rose-ebony);
   }
   #svg-display {
     margin: auto;
@@ -357,7 +350,40 @@ h2 {
   .contact-form {
     padding: 1rem;
   }
-  #footer {
-    margin-top: 100px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: hsla(234, 37%, 11%, 0.8);
+    color: var(--steel-blue);
+  }
+  a {
+    color: var(--SVG);
+  }
+  a:hover {
+    color: var(--blue-grey);
+  }
+  .active :hover {
+    color: var(--cool-gray);
+  }
+  button {
+    background-color: var(--cool-gray);
+  }
+  button:hover {
+    background-color: rgb(25, 16, 34);
+    border-color: var(--cool-gray);
+  }
+  .link-list-item > a {
+    color: var(--blue-grey);
+  }
+  .link-list-item > a:hover {
+    color: var(--SVG);
+  }
+  .nav-container {
+    border-radius: 5px;
+    background: radial-gradient(
+      circle,
+      hsla(2, 23%, 21%, 0.1) 0%,
+      hsla(2, 23%, 21%, 0.01) 100%
+    );
   }
 }
