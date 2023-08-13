@@ -7,10 +7,7 @@ export default function Footer() {
       <section className="footer-section-el">
         <ul>
           <li>
-            <a
-              href="https://www.linkedin.com/in/josh-eflin-4378baa7/"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/josh-eflin/" target="_blank">
               <img src={LinkedInIcon} alt="Email Icon" />
             </a>
           </li>
