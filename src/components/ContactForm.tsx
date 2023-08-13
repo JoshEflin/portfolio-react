@@ -109,7 +109,7 @@ export default function ContactForm() {
     }
     // Alert the user their first and last name, clear the inputs
     alert(
-      `This is a test feature only, If you'd like to send a real email please click the mail icon in the footer`
+      `This is a test feature only, If you'd like to send a real email please click the phone icon in the footer`
     );
     setFirstName("");
     setEmail("");
