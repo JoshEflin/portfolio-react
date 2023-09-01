@@ -332,6 +332,10 @@ h2 {
   #svg-display {
     margin: auto;
   }
+  #view-window {
+    margin-top: 47%;
+  }
+  
 }
 @media screen and (max-width: 500px) {
   .link-list-item {
