@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  font-family: "League Spartan", Inter, system-ui, Avenir, Helvetica, Arial,
+  font-family: 'League Spartan', Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -115,7 +115,7 @@ button:focus-visible {
   padding-left: 0;
   display: flex;
   flex-direction: row;
-  font-family: "League Spartan";
+  font-family: 'League Spartan';
   font-weight: 600;
   font-size: 1.75rem;
   justify-content: space-evenly;
@@ -258,9 +258,7 @@ footer img {
   width: 100%;
   list-style: none;
 }
-/* #view-window{
-  padding-bottom: 125px;
-} */
+
 #resume {
   min-width: 65%;
   height: 75vh;
@@ -308,19 +306,17 @@ h2 {
 }
 .inputs {
   border-radius: 5px;
-  font-family: "League Spartan";
+  font-family: 'League Spartan';
   font-size: 1.125rem;
   border-color: var(--rose-ebony);
-  width: 100$;
+  /* width: 100%; */
 }
 .active {
   border-color: var(--steel-blue);
 }
 .name-input {
 }
-/* #footer {
-  margin-top: 0;
-} */
+
 @media screen and (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -344,11 +340,19 @@ h2 {
   .tech-list {
     flex-wrap: wrap;
   }
-  /* .contact-container{
-    width:50vw
-  } */
+  .nav-container {
+    padding-bottom: 5%;
+  }
+  .contact-view {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+  }
   .contact-form {
     padding: 1rem;
+  }
+  #view-window {
+    margin-top: 47%;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -378,6 +382,20 @@ h2 {
   .link-list-item > a:hover {
     color: var(--SVG);
   }
+  .contact-view {
+    margin: 15%;
+  }
+  .contact-form {
+    margin-top: 40%;
+    margin-bottom: 40%;
+  }
+  #silly-photo {
+    object-fit: scale-down;
+  }
+  .contact-container {
+    margin-top: 30%;
+  }
+
   .nav-container {
     border-radius: 5px;
     background: radial-gradient(
